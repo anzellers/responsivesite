@@ -1,0 +1,617 @@
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+/******* CUSTOM FONTS ********/
+@font-face {
+    font-family: 'Avenir Next';
+    src: url (../fonts/AvenirNextLTPro-Regular.otf);
+}
+
+@font-face {
+    font-family: 'Avenir Next Condensed';
+    src: url (../fonts/AvenirNextLTPro-Cn.otf);
+}
+
+@font-face {
+    font-family: 'Avenir Next Condensed';
+    src: url (../fonts/AvenirNextLTPro-MediumCn.otf);
+    font-weight: medium;
+}
+
+@font-face {
+    font-family: 'Avenir Next Condensed';
+    src: url (../fonts/AvenirNextLTPro-DemiCn.otf);
+    font-weight: bold;
+}
+
+
+/******* GENERAL STYLE ********/
+body {
+    background-color: #fff;
+    color: #222;
+    font-size: 0.75em;
+    font-family: 'Avenir Next', 'Helvetica', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font: normal normal 0.875em 'Avenir Next Condensed', 'Helvetica', sans-serif;
+    padding-top: 0.2em;
+}
+
+h1,h2 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    font-size: 2.333333333em;
+}
+
+h2 {
+    text-transform: uppercase;
+    color: #3195A1;
+    font-size: 1.5em;
+}
+
+h3 {
+    font-family: 'Avenir Next Condensed', sans-serif;
+    font-size: 1.3333333333em;
+    font-weight: bold;
+}
+
+h4 {
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+a:hover {
+    color: #ea7a57;
+}
+
+p, figcaption, li {
+    line-height: 1.4em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a>img:hover {
+  -webkit-filter: brightness(50%);
+  filter: brightness(50%);  
+}
+
+form {
+    margin: 2em 0;
+}
+
+form :focus {
+    background-color: #f4f4f4;
+    border: 1px solid #EA7A57; 
+    border-bottom: 5px solid #EA7A57;
+    outline: none;
+    color: #1e1e1e;
+}
+
+input { 
+    width: 20em;
+    margin: 0.5em auto;
+    background-color: #f2f2ed;
+    border: 1px solid #A6C4BC; 
+    border-bottom: 5px solid #A6C4BC;
+    padding: 0.4em 0.8em; 
+    display: block;
+}
+
+label {
+    text-transform: uppercase;
+}
+
+button {
+    background-color: #a6c4bc;
+    color: #fff;
+    padding: 0.6em 1.2em;
+    border: 2px solid #9bbfab;
+    font-family: 'Avenir Next', Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0.5em;
+}
+
+button[type="submit"] {
+    background-color: #ea7a57;
+    border: 2px solid #ea8a70;
+}
+
+button[type="submit"]:hover {
+    background-color: #3195A1;
+    border: 2px solid #A6C4BC;
+}
+
+
+
+/******* CUSTOM CLASSES ********/
+.container {
+    margin: 8em 0.5em 4em 0.5em;
+}
+
+.container header {
+    padding-top: 1.5em;
+}
+
+.togglemenu {
+    background-color: #1D2326;
+    position: relative;
+    width: 100%;
+    height: 4.5833333333em;
+}
+
+.primemenu {
+/*    background-color: #1D2326;
+    display: block;
+    position: relative;
+    top: 4.5833333333em;
+    left: 15.583333em;
+    width: 10em;
+    float: right;*/
+    display: none;
+}
+
+.primemenu a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Avenir Next Condensed', sans-serif;
+    font-weight: 200;
+    font-size: 1.3333333333em;
+    display: block;
+    padding: 0.5em;
+}
+
+.primemenu a:hover {
+    background-color: #EA7A57;
+}
+
+.menuicon {
+    width: 2.5em; 
+    float: right;
+    margin: 1.5em; 
+}
+
+.menuicon:hover + .primemenu {
+    background-color: #1D2326;
+    display: block;
+    position: absolute;
+    top: 4.5833333333em;
+    right: 0;
+    width: 10em;
+    float: right;
+}
+
+#searchicon {
+    display: none;
+}
+
+#searchtext {
+    display: display;
+}
+
+.sliderimage {
+    width: 100%;
+    height: 16.6666666667em;
+}
+
+.bg-image-slider {
+    background-image: url(../img/throne.jpg);
+    
+    -ms-background-position-x: center;
+    -ms-background-position-y: top;
+    background-position: center top;
+
+    background-size: cover;
+/*    position: relative;*/
+}
+
+.slidercaption {
+    position: relative;
+    top: 16.6666666667em;
+    margin: 0 0.5em;
+}
+
+.selector {
+    display: block;
+    width: 1em;
+    height: 1em;
+    background-color: #F3F3F3;
+}
+
+.selector:hover {
+    background-color: #3195A1;
+}
+
+.selector:hover + #slide1 {
+    background-color: #3195A1;
+}
+
+div[id="slide1"]:hover + .bg-image-slider {
+    background-image: url(../img/veteran.jpg);
+}
+
+.authorname {
+    text-transform: uppercase;
+    color: #9B9B9B;
+}
+
+.featurearticles {
+    border-bottom: 0.1875em;
+    border-color: #3195A1; 
+    border-style: solid;
+}
+
+.featurearticles h4 {
+    font-family: 'Avenir Next Condensed', sans-serif;
+    font-size: 1.5em;
+    color: #fff;
+    background-color: #3195A1; 
+    display: inline-block;
+    padding: 0.4166666667em;
+}
+
+.featureblurb {
+    overflow: none;
+}
+
+.featureblurb img {
+    margin-bottom: 0.5em; 
+}
+
+.featureblurb a {
+    color: #3195A1
+}
+
+.recentreviews {
+    overflow: hidden;
+}
+
+.recentreviews header {
+    border-bottom: 0.1875em;
+    border-color: #333; 
+    border-style: solid;
+}
+
+.recentreviews h2 {
+    color: #333; 
+}
+
+.reviewblurb {
+    overflow: hidden;
+}
+
+.reviewblurb img {
+    max-width: 50%;
+    height: auto; 
+    float: left;
+}
+
+.reviewblurb figcaption, .featureblurb figcaption {
+    display: none;
+}
+
+.reviewblurb>div[class="descriptiontext"] {
+    float: left;
+    width: 50%;
+    padding: 1em;
+}
+
+.rating {
+    display: none;
+}
+
+.sidebar header {
+    border-bottom: 0.1875em;
+    border-color: #3195A1; 
+    border-style: solid;
+}
+
+.sidebar ul {
+    padding-top: 0.7em;
+}
+
+.popularposts figure img {
+    display: none;
+}
+
+.popularposts a{
+    text-transform: uppercase;
+    font-family: 'Avenir Next Condensed';
+    font-weight: medium;
+    color: #222;
+    font-size: 1.16666666667em;
+}
+
+.popularposts>li:hover, .popularposts a:hover{
+    display: inline-block;
+    background-color: #ea7a57;
+    color: #fff;
+}
+
+.mainfooter {
+    background-color: #1D2326;
+    text-align: center;
+    color: #A6C4BC; 
+    padding: 1.5em;
+}
+
+.mainfooter a {
+    color: #fff;
+    font-size: 1em;
+}
+
+.mainfooter a:hover {
+    font-weight: bolder;
+}
+
+.contactlinks {
+    margin: 2em 0;
+}
+
+.contactlinks>img {
+    width: 1.8em; 
+}
+
+.socialmedia {
+    display: block;
+    width: 15.3333333333em;
+    margin: 0 auto;
+}
+
+.socialmedia li {
+    float: left;
+}
+
+.socialmedia a {
+    background-color: #fff;
+    display: block;
+    width: 40px;
+    height: 40px; 
+    padding: 0.7em;
+    margin: 0.25em;
+}
+
+a[id="facebook"]:hover {
+    background-color: blue;
+}
+
+#twitter:hover {
+    background-color: blue;
+}
+
+#youtube:hover {
+    background-color: blue;
+}
+
+#google:hover {
+    background-color: blue;
+}
+
+#instagram:hover {
+    background-color: blue;
+}
+
+#pintrest:hover {
+    background-color: blue;
+}
+
+#vimeo:hover {
+    background-color: blue;
+}
+
+.labelabove {
+    display: block;
+}
+
+.floatleft {
+    float: left;
+}
+
+.floatright {
+    float: right;
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

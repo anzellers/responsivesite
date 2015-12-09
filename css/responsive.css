@@ -1,0 +1,266 @@
+/******* RESPONSIVE CODING ********/
+
+@media (min-width: 768px) {
+
+body {
+	font-size: 0.875em;
+}
+
+input {
+	margin: 0;
+	display: inline-block;
+}
+
+.container {
+    margin: 5em 2.8571428571em;
+}
+
+.togglemenu {
+    background-color: #1D2326;
+    width: 100%;
+    height: 6em;
+}
+
+.primemenu {
+    display: block;
+    overflow: hidden;
+    float: right;
+    margin: 0 0.56em;
+}
+
+.primemenu>li {
+	display: inline-block;
+	float: left;
+}
+
+.primemenu a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Avenir Next Condensed', sans-serif;
+    font-weight: 200;
+    font-size: 1.1428571429em;
+    display: block;
+    padding: 2em 0.5em;
+    height: 5.3125em;
+}
+
+.primemenu a:hover {
+    background-color: #EA7A57;
+}
+
+.menuicon {
+	display: none;
+}
+
+#searchicon {
+	display: block;
+}
+
+#searchtext {
+	display: none;
+}
+
+.sliderimage {
+	top: 5.3125em;;
+	height: 26.25em;
+}
+
+.featureblurb img {
+	width: 40%;
+	display: block;
+	float: left;
+}
+
+.featureblurb>div[class="descriptiontext"]  {
+	float: left;
+	width: 60%;
+	height: auto;
+	padding: 1.2em;
+}
+
+.reviewblurb figcaption, .featureblurb figcaption {
+    display: block;
+    padding: 0.7em 0;
+}
+
+.featureblurb {
+	overflow: hidden;
+}
+
+.reviewblurb img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 0.5em; 
+    float: none;
+}
+
+.reviewblurb>div[class="descriptiontext"] {
+    float: none;
+    width: 100%;
+}
+
+.recentreviews {
+	float: left;
+	width: 33%;
+	padding-right: 1em;
+}
+
+.rating {
+    display: block;
+    margin-top: 0.5em;
+    overflow: hidden;
+}
+
+.rating>img{
+    width: 1.7em;
+    margin: 0;
+    float: left;
+}
+
+.secondsection {
+	overflow: none;
+	width: 100%
+}
+
+.popularposts figure>img {
+    display: block;
+    width: 100%;
+}
+
+.popularposts figure>img:hover {
+  -webkit-filter: brightness(50%);
+  filter: brightness(50%);
+}
+
+.popularposts>li {
+	float: left;
+	width: 32%;
+}
+
+.popularposts>li:nth-child(2n) {
+	margin: 0 0.9em;
+}
+
+.popularposts {
+	overflow: none;
+}
+
+.sidebar {
+	overflow: hidden;
+	width: 100%;
+}
+
+.sidebar header {
+	display: block;
+	padding-top: 1.5em;
+	overflow: hidden;
+	width: 100%;
+}
+
+.mainfooter {
+    text-align: left;
+    overflow: hidden;
+}
+
+.mainfooter>div:first-child {
+	width: 66.66666667%;
+	margin: 0 auto;
+}
+
+.footerlinks {
+	margin: 2em 0;
+}
+
+.footerlinks, .contactlinks {
+	float: left;
+	width: 50%;
+	padding: 0 2em;
+}
+
+.socialmedia {
+	margin: 0;
+}
+
+.newsletter {
+	float: left;
+	width: 100%;
+}
+
+form {
+	width: 60%;
+	margin: 0 auto;
+	margin-top: 2em;
+}
+
+}
+
+
+@media (min-width: 1024px) {
+
+body {
+	font-size: 1em;
+}
+
+.container {
+	overflow: hidden;
+    margin: 4em 0.5em 4em 0.5em;
+}
+
+main {
+	width: 66.666666667%;
+	float: left;
+}
+
+.sidebar {
+	width: 25%;
+	float: left;
+	margin-left: 5.25em;
+}
+
+.sidebar ul {
+	padding: 0;
+}
+
+.popularposts>figure img {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.popularposts>li {
+	float: none;
+	width: 100%;
+	margin: 0;
+}
+
+.popularposts>li:nth-child(2n) {
+	margin: 0;
+}
+
+.popularposts figcaption {
+	position: relative;
+    bottom: 3em;
+    margin: 0 1em;
+    color: #fff;
+    font-weight: 500;
+}
+
+.popularposts li:hover, .popularposts a:hover {
+    background-color: transparent;
+}
+
+.popularposts figcaption:hover {
+	display: inline-block;
+	background-color: #ea7a57;
+}
+
+
+}
+
+@media (min-width: 1439px) {
+
+
+
+}
