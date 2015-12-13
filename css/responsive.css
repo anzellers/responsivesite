@@ -1,6 +1,46 @@
 /******* RESPONSIVE CODING ********/
 
-@media (min-width: 768px) {
+@media (min-width: 29.25em) {
+
+.featureblurb img {
+	width: 40%;
+	display: block;
+	float: left;
+}
+
+.featureblurb>div[class="descriptiontext"]  {
+	float: left;
+	clear: right;
+	width: 60%;
+	height: auto;
+	padding: 1.2em;
+}
+
+.featureblurb {
+	overflow: hidden;
+}
+
+.featureblurb figcaption {
+    display: block;
+    padding: 0.7em 0;
+}
+
+.reviewblurb img {
+    max-width: 40%;
+    height: auto;
+}
+
+.reviewblurb figcaption {
+    display: block;
+    padding: 0.7em 0;
+}
+
+
+}
+
+
+
+@media (min-width: 48em) {
 
 body {
 	font-size: 0.875em;
@@ -12,7 +52,11 @@ input {
 }
 
 .container {
-    margin: 5em 2.8571428571em;
+    margin: 6em 2.8571428571em 2em 2.8571428571em;
+}
+
+.headerlogo {
+    margin-top: 1.2em; 
 }
 
 .togglemenu {
@@ -25,12 +69,14 @@ input {
     display: block;
     overflow: hidden;
     float: right;
+    clear: left;
     margin: 0 0.56em;
 }
 
 .primemenu>li {
 	display: inline-block;
 	float: left;
+	clear: right;
 }
 
 .primemenu a {
@@ -41,8 +87,7 @@ input {
     font-weight: 200;
     font-size: 1.1428571429em;
     display: block;
-    padding: 2em 0.5em;
-    height: 5.3125em;
+    padding: 2.045em 0.5em;
 }
 
 .primemenu a:hover {
@@ -55,37 +100,11 @@ input {
 
 #searchicon {
 	display: block;
+	padding: 2em 0.875em;
 }
 
 #searchtext {
 	display: none;
-}
-
-.sliderimage {
-	top: 5.3125em;;
-	height: 26.25em;
-}
-
-.featureblurb img {
-	width: 40%;
-	display: block;
-	float: left;
-}
-
-.featureblurb>div[class="descriptiontext"]  {
-	float: left;
-	width: 60%;
-	height: auto;
-	padding: 1.2em;
-}
-
-.reviewblurb figcaption, .featureblurb figcaption {
-    display: block;
-    padding: 0.7em 0;
-}
-
-.featureblurb {
-	overflow: hidden;
 }
 
 .reviewblurb img {
@@ -102,8 +121,18 @@ input {
 
 .recentreviews {
 	float: left;
+	clear: right;
 	width: 33%;
-	padding-right: 1em;
+}
+
+.secondsection>div.recentreviews {
+	padding: 0 0.67em;
+}
+
+.secondsection>div.recentreviews:nth-child(2n) {
+	padding: 0 0.5em;
+	border-right: 2px solid #d8d8d8;
+	border-left: 2px solid #d8d8d8;
 }
 
 .rating {
@@ -116,11 +145,13 @@ input {
     width: 1.7em;
     margin: 0;
     float: left;
+    clear: right;
 }
 
 .secondsection {
-	overflow: none;
-	width: 100%
+	overflow: hidden;
+	width: 100%;
+	margin-top: 2em;
 }
 
 .popularposts figure>img {
@@ -135,6 +166,7 @@ input {
 
 .popularposts>li {
 	float: left;
+	clear: right;
 	width: 32%;
 }
 
@@ -143,7 +175,8 @@ input {
 }
 
 .popularposts {
-	overflow: none;
+	overflow: hidden;
+    padding-top: 0;
 }
 
 .sidebar {
@@ -166,6 +199,7 @@ input {
 .mainfooter>div:first-child {
 	width: 66.66666667%;
 	margin: 0 auto;
+	overflow: hidden;
 }
 
 .footerlinks {
@@ -174,6 +208,7 @@ input {
 
 .footerlinks, .contactlinks {
 	float: left;
+	clear: right;
 	width: 50%;
 	padding: 0 2em;
 }
@@ -184,49 +219,78 @@ input {
 
 .newsletter {
 	float: left;
+	clear: right;
 	width: 100%;
 }
 
 form {
-	width: 60%;
-	margin: 0 auto;
-	margin-top: 2em;
+    width: 85%;
+    margin: 0 auto;
 }
 
 }
 
 
-@media (min-width: 1024px) {
+@media (min-width: 64em) {
 
 body {
 	font-size: 1em;
 }
 
+h2 {
+	font-size: 1.25em;
+}
+
+h3 {
+	font-size: 1.125em;
+}
+
+#searchicon {
+	padding: 1.8em 0.875em 2.3em 0.875em;;
+}
+
+.featurearticles h4 {
+	font-size: 1.125em
+}
+
 .container {
 	overflow: hidden;
-    margin: 4em 0.5em 4em 0.5em;
+    margin: 6em 0.5em 10em 0.5em;
 }
 
 main {
 	width: 66.666666667%;
 	float: left;
+	clear: right;
+}
+
+.recentreviews {
+	float: left;
+	clear: right;
+	width: 32.5%;
 }
 
 .sidebar {
 	width: 25%;
-	float: left;
-	margin-left: 5.25em;
+	position: absolute;
+	right: 0.5em;
 }
 
 .sidebar ul {
 	padding: 0;
 }
 
-.popularposts>figure img {
+.popularposts figure {
+	float: left;
+	clear: right;
+	position: relative;
+}
+
+.popularposts figure>img {
     display: block;
-    position: relative;
     width: 100%;
     height: auto;
+    margin-bottom: 1em;
 }
 
 .popularposts>li {
@@ -240,11 +304,12 @@ main {
 }
 
 .popularposts figcaption {
-	position: relative;
-    bottom: 3em;
+	position: absolute;
+    bottom: 2em;
     margin: 0 1em;
     color: #fff;
     font-weight: 500;
+    display: inline-block;
 }
 
 .popularposts li:hover, .popularposts a:hover {
@@ -252,15 +317,80 @@ main {
 }
 
 .popularposts figcaption:hover {
-	display: inline-block;
 	background-color: #ea7a57;
 }
 
+.mainfooter {
+	font-size: 0.875em;
+	padding: 1em;
+}
+
+.mainfooter>div:first-child {
+	width: 83.333333333%;
+	margin: 0 auto;
+}
+
+.contactlinks {
+	width: 25%;
+	padding: 0 1em;
+}
+
+.footerlinks {
+	width: 20%;
+	padding: 0 1em;
+}
+
+.socialmedia {
+    display: block;
+    width: 12em;
+}
+
+.socialmedia a {
+    width: 2.5em;
+    height: 2.5em; 
+    padding: 0.5em;
+    margin: 0.25em;
+}
+
+.newsletter {
+	width: 55%;
+	padding: 0 1em;
+}
+
+form {
+	width: 90%;
+	margin: 0;
+	margin-top: 2em;
+	float: right;
+	clear: left;
+}
+
+button {
+    margin: 0.5em;
+    height: 2em;
+    padding: 0.3em 1.2em;
 
 }
 
-@media (min-width: 1439px) {
 
+}
+
+@media (min-width: 90em) {
+
+.togglemenu {
+	padding: 0 10%;
+}
+
+.container {
+	width: 83.333333333%;
+	margin: 6em auto;
+}
+
+.sidebar {
+	width: 25%;
+	position: relative;
+	left: 6.44em;
+}
 
 
 }

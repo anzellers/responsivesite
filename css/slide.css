@@ -1,14 +1,13 @@
-* { margin: 0; padding: 0; }
- 
-body {background-color:#666;}
+/* modified CSS stylesheet from http://www.blogohblog.com/cool-slider-css3-html/ */
 
 .slider {
     display: block;
-    height: 320px;
+    height: 18em;
     width: 100%;
     margin: auto;
-    margin-top: 20px;
     position: relative;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
 }
  
 .sliderinner {
@@ -25,22 +24,33 @@ body {background-color:#666;}
     overflow: hidden;
     position: relative;
     left: 0px;
-/*    -webkit-transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+    -webkit-transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
     -moz-transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
     -o-transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
-    transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);*/
+    transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
 }
  
 .sliderinner>ul>li {
     width: 20%;
-    height: 320px;
+    height: 18em;
     float: left;
+    clear: right;
     position: relative;
 }
- 
+
 .sliderimage {
     margin: auto;
     height: 100%;
+}
+
+.sliderimage:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(transparent, #222);
 }
 
 .bg-image-slider1 {
@@ -54,7 +64,7 @@ body {background-color:#666;}
 }
 
 .bg-image-slider2 {
-    background-image: url(../img/veteran.jpg);
+    background-image: url(../img/veteran2.jpg);
     
     -ms-background-position-x: center;
     -ms-background-position-y: top;
@@ -62,6 +72,37 @@ body {background-color:#666;}
 
     background-size: cover;
 }
+
+.bg-image-slider3 {
+    background-image: url(../img/beautyinside.jpg);
+    
+    -ms-background-position-x: center;
+    -ms-background-position-y: top;
+    background-position: center top;
+
+    background-size: cover;
+}
+
+.bg-image-slider4 {
+    background-image: url(../img/assassination.jpg);
+    
+    -ms-background-position-x: center;
+    -ms-background-position-y: top;
+    background-position: center top;
+
+    background-size: cover;
+}
+
+.bg-image-slider5 {
+    background-image: url(../img/pieta.jpg);
+    
+    -ms-background-position-x: center;
+    -ms-background-position-y: top;
+    background-position: center top;
+
+    background-size: cover;
+}
+
  
 .slider input[type=radio] {
     position: absolute;
@@ -74,14 +115,14 @@ body {background-color:#666;}
 .slider label {
     position: absolute;
     left: 50%;
-    bottom: -45px;
+    bottom: 2em;
     z-index: 100;
     width: 12px;
     height: 12px;
     background-color: #F3F3F3;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
     cursor: pointer;
     -webkit-transition: background-color .2s;
     -moz-transition: background-color .2s;
@@ -90,20 +131,107 @@ body {background-color:#666;}
 }
 
 .slidercaption {
-    position: absolute;
-    top: 16.6666666667em;
-    margin: 0 0.5em;
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+    padding: 5.5em 1em;
+    color: #fff;
+    text-align: center;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.slidercaption h1 {
+    margin: 0;
+    width: 100%;
+}
+
+.slidercaption p {
+    display: none;
 }
  
-.slider input[type=radio]#control1:checked~label[for=control1] { background-color: #333; }
-.slider input[type=radio]#control2:checked~label[for=control2] { background-color: #333; }
-.slider input[type=radio]#control3:checked~label[for=control3] { background-color: #333; }
-.slider input[type=radio]#control4:checked~label[for=control4] { background-color: #333; }
+.slider input[type=radio]#control1:checked~label[for=control1] { background-color: #3195A1; }
+.slider input[type=radio]#control2:checked~label[for=control2] { background-color: #3195A1; }
+.slider input[type=radio]#control3:checked~label[for=control3] { background-color: #3195A1; }
+.slider input[type=radio]#control4:checked~label[for=control4] { background-color: #3195A1; }
+.slider input[type=radio]#control5:checked~label[for=control5] { background-color: #3195A1; }
 .slider label[for=control1] { margin-left: -36px }
 .slider label[for=control2] { margin-left: -18px }
 .slider label[for=control4] { margin-left: 18px }
+.slider label[for=control5] { margin-left: 36px }
 .slider input[type=radio]#control1:checked~.sliderinner>ul { left: 0 }
 .slider input[type=radio]#control2:checked~.sliderinner>ul { left: -100% }
 .slider input[type=radio]#control3:checked~.sliderinner>ul { left: -200% }
 .slider input[type=radio]#control4:checked~.sliderinner>ul { left: -300% }
+.slider input[type=radio]#control5:checked~.sliderinner>ul { left: -400% }
+
+
+
+@media (min-width: 48em) { 
+
+.slider {
+    height: 32em;
+    top: 6em;
+}
+
+.sliderinner>ul>li {
+    height: 32em;
+}
+
+.slider label {
+    left: 85%;
+}
+
+.slidercaption {
+    position: absolute;
+    top: 10em;
+    margin: 0 1.5em;
+    color: #fff;
+    width: 60%;
+    text-align: left;
+}
+
+.slidercaption p{
+    display: block;
+    color: #fff;
+    font-size: 1em;
+    margin: 1em 0;
+}
+
+.slidercaption h1 {
+    margin: 0;
+    border-bottom: 3px solid #fff;
+}
+
+.slider label {
+    bottom: 4em;
+    width: 15px;
+    height: 15px;
+}
+
+.slider label[for=control1] { margin-left: -44px }
+.slider label[for=control2] { margin-left: -22px }
+.slider label[for=control4] { margin-left: 22px }
+.slider label[for=control5] { margin-left: 42px }
+
+}
+
+@media (min-width: 64em) {
+
+.slidercaption {
+    top: 12em;
+}
+
+
+}
+
+
+@media (min-width: 90em) { 
+    
+    .slider {
+        width: 83.3333333337%;
+        margin: 0 auto;
+    }
+
+}
  

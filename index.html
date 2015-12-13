@@ -3,22 +3,26 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
+        <title>RECSTREAM - Your source for the latest news and updates in Asian Enterntainment</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="css/responsive.css">       
+        <link rel="stylesheet" href="css/slide.css">
         <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100' rel='stylesheet' type='text/css'>
 
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
+    
     <body>
 
         <header>
             <nav class="togglemenu">
+
+            <img src="img/logo.png" class="headerlogo">
 
             <img src="img/menu.png" class="menuicon">
             
@@ -29,68 +33,94 @@
                 <li><a href="reviews.html">Reviews</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="" id="searchtext">Search</a><a href="" id="searchicon">Icon</a></li>
+                <li><a href="" id="searchtext">Search</a><a href="" id="searchicon"><img src="img/search.png"></a></li>
             </ul>
             
             </nav>
 
-            <div class="sliderimage bg-image-slider">
-                <div class="slidercaption">
-                    <h1>The Throne (2015): Film Review</h1>
-                    <p class ="authorname">BY JOHN SMITH</p>
-                </div>
+
+            <div class="slider"> 
+
+
+            <input type="radio" id="control1" name="controls" checked="checked"/>
+            <label for="control1"></label>
+            <input type="radio" id="control2" name="controls"/>
+            <label for="control2"></label>
+            <input type="radio" id="control3" name="controls"/>
+            <label for="control3"></label>
+            <input type="radio" id="control4" name="controls"/>
+            <label for="control4"></label>
+            <input type="radio" id="control5" name="controls"/>
+            <label for="control5"></label>
+
+
+
+
+
+            <div class="sliderinner">
+                
+                <ul>
+
+                    <li>
+                        <a href=""><div class="sliderimage bg-image-slider1">
+                            <div class="slidercaption">
+                            <h1>The Throne (2015): Film Review</h1>
+                            <p class ="authorname">BY JOHN SMITH</p>
+                            <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove.<p>
+                            </div>
+                        </div>
+                    </a>
+                    </li>
+
+
+                    <li>
+                        <a href=""><div class="sliderimage bg-image-slider2">
+                            <div class="slidercaption">
+                            <h1>Top 25 films of 2015</h1>
+                            <p class ="authorname">BY staff</p>
+                            <p>Pityful a rethoric question ran over her cheek, then she continued her way. On her way she met a copy.<p>
+                            </div>
+                        </div></a>
+                    </li>
+
+
+                    <li>
+                        <a href="article.html"><div class="sliderimage bg-image-slider3">
+                            <div class="slidercaption">
+                            <h1>Beauty Inside (2015): Film Review</h1>
+                            <p class ="authorname">BY John Smith</p>
+                            <p>The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word</p>
+                            </div>
+                        </div></a>
+                    </li>
+
+
+                    <li>
+                        <a href=""><div class="sliderimage bg-image-slider4">
+                            <div class="slidercaption">
+                            <h1>Some Important Article</h1>
+                            <p class ="authorname">BY some author</p>
+                            <p>An article so important it got it's own slide.<p>
+                            </div>
+                        </div></a>
+                    </li>
+
+                    <li>
+                        <a href=""><div class="sliderimage bg-image-slider5">
+                            <div class="slidercaption">
+                            <h1>Another Feature Article</h1>
+                            <p class ="authorname">BY another author</p>
+                            <p>But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole<p>
+                            </div>
+                        </div></a>
+                    </li>
+
+
+
+
+                </ul>
             </div>
-
-<!--     <div class="slider"
-        <input type="radio" id="control1" name="controls" checked="checked"/>
-        <label for="control1"></label>
-        <input type="radio" id="control2" name="controls"/>
-        <label for="control2"></label>
-        <input type="radio" id="control3" name="controls"/>
-        <label for="control3"></label>
-        <input type="radio" id="control4" name="controls"/>
-        <label for="control4"></label>
-
-        <div class="sliderinner">
-            <ul>
-                <li>
-                    <div class="sliderimage bg-image-slider1">
-                        <div class="slidercaption">
-                        <h1>The Throne (2015): Film Review</h1>
-                        <p class ="authorname">BY JOHN SMITH</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="sliderimage bg-image-slider2">
-                        <div class="slidercaption">
-                        <h1>The Throne (2015): Film Review</h1>
-                        <p class ="authorname">BY JOHN SMITH</p>
-                        </div>
-                    </div>
-                </li>
-                   <li>
-                    <div class="sliderimage bg-image-slider3">
-                        <div class="slidercaption">
-                        <h1>The Throne (2015): Film Review</h1>
-                        <p class ="authorname">BY JOHN SMITH</p>
-                        </div>
-                    </div>
-                </li>
-                   <li>
-                    <div class="sliderimage bg-image-slider4">
-                        <div class="slidercaption">
-                        <h1>The Throne (2015): Film Review</h1>
-                        <p class ="authorname">BY JOHN SMITH</p>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div> -->
-
-
-
+            </div>
 
         </header>
 
@@ -102,8 +132,8 @@
                             <a href=""><img src="img/bluedragon.jpg"></a>
                             <div class="descriptiontext">
                                 <h2><a href="">Blue Dragon Awards 2015</a></h2>
-                                <p class="authorname">BY Andrew Howles</p>
-                                <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lobortis est diam, vitae cursus leo bibendum non.</figcaption>
+                                <p class="authorname">BY <a href="">Andrew Howles</a></p>
+                                <figcaption>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</figcaption>
                             </div>
                         </figure>
                     <header class="featurearticles"><h4>Features</h4></header>
@@ -111,8 +141,8 @@
                             <a href=""><img src="img/assassination.jpg"></a>
                             <div class="descriptiontext">
                             <h2><a href="">Assassination Press Conference</a></h2>
-                            <p class="authorname">BY Andrew Howles</p>
-                            <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lobortis est diam, vitae cursus leo bibendum non.</figcaption>
+                            <p class="authorname">BY <a href="">Andrew Howles</a></p>
+                            <figcaption>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</figcaption>
                         </div>
                         </figure>
                 </div>
@@ -124,9 +154,9 @@
                                 <a href=""><img src="img/shewaspretty.jpg"></a>
                                 <div class="descriptiontext">
                                     <h3><a href="">She was Pretty: Finale Recap</a></h3>
-                                    <p class="authorname">By Adele Kalsie</p>
+                                    <p class="authorname">By <a href="">Adele Kalsie</a></p>
                                     <div class="rating"><img src="img/star.svg"><img src="img/star.svg"><img src="img/star.svg"><img src="img/nostar.svg"><img src="img/nostar.svg"></div>
-                                    <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lobortis est diam, vitae cursus leo bibendum non.</figcaption>
+                                    <figcaption>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life.</figcaption>
                                 </div>
                             </figure>
                     </div>
@@ -136,23 +166,23 @@
                     <figure  class="reviewblurb">
                         <a href="article.html"><img src="img/beautyinside.jpg"></a>
                         <div class="descriptiontext">
-                            <h3><a href="">Beauty Inside (2015): Film Review</a></h3>
-                            <p class="authorname">By John Smith</p>
+                            <h3><a href="article.html">Beauty Inside (2015): Film Review</a></h3>
+                            <p class="authorname">By <a href="">John Smith</a></p>
                             <div class="rating"><img src="img/star.svg"><img src="img/star.svg"><img src="img/star.svg"><img src="img/star.svg"><img src="img/nostar.svg"></div>
-                            <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lobortis est diam, vitae cursus leo bibendum non.</figcaption>
+                            <figcaption>One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</figcaption>
                         </div>
                     </figure>
                 </div>
 
                 <div class="recentreviews">
-                <header><h2>MUSIC</h2></header>
+                <header><h2>MUSIC</h2></header> 
                     <figure  class="reviewblurb">
-                        <a href="article.html"><img src="img/beautyinside.jpg"></a>
+                        <a href="article.html"><img src="img/iu.jpg"></a>
                         <div class="descriptiontext">
                             <h3><a href="">IU’s Chat-sire (2015):Music Review</a></h3>
-                            <p class="authorname">By Michelle Young</p>
+                            <p class="authorname">By <a href="">Michelle Young</a></p>
                             <div class="rating"><img src="img/star.svg"><img src="img/star.svg"><img src="img/star.svg"><img src="img/star.svg"><img src="img/halfstar.svg"></div>
-                            <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lobortis est diam, vitae cursus leo bibendum non.</figcaption>
+                            <figcaption>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli,</figcaption>
                         </div>
                      </figure>
                 </div>
@@ -164,7 +194,7 @@
                 <header><h2>Popular Posts</h2></header>
                     <ul class="popularposts">
                         <li><a href=""><figure>
-                            <img src="img/veteran.jpg">
+                            <img src="img/oursister.jpg">
                             <figcaption>Our Sister(2015): Film Review<figcaption>
                         </figure></a></li>
                         <li><a href=""><figure>
@@ -172,24 +202,37 @@
                             <figcaption>FEATURES: VETERAN TOPS BOX OFFICE FOR 5 WEEKS<figcaption>
                         </figure></a></li>
                         <li><a href=""><figure>
-                            <img src="img/veteran.jpg">
+                            <img src="img/beastboy.jpg">
                             <figcaption>The Boy and The Beast opens in theatres<figcaption>
                         </figure></a></li>
-                    <ul>
+                    </ul>
 
                 <header><h2>Release Dates</h2></header>
                     <ul class="releases">
-                        <li>A Journey Through Time with Anthony (Nov 19)</li> 
-                        <li>Fall in Love Like a Star (Dec 5)</li>
-                        <li>Mr Six (Dec 17) </li>
-                        <li>Ip Man 3 (Dec 24) </li>
-                        <li>SMTown: The Stage (Nov 5)</li>
+                        <li>
+                            <ul class="releasemonth"><p>November</p>
+                                <li><strong>21.</strong> Sayonara</li>
+                                <li><strong>21.</strong> World of Delight</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul class="releasemonth"><p>December</p>
+                                <li><strong>10.</strong>  The File</li>
+                                <li><strong>10.</strong> Tattoo</li>
+                                <li><strong>16.</strong> The Himalayas</li>
+                                <li><strong>16.</strong> The Tiger: An Old Hunter's Tale</li>
+                            </ul>
+                        </li>
                     </ul>
 
                 <header><h2>Upcoming Events</h2></header>
                     <ul class="upcomingevents">
-                        <li>Japanese Film Festival 2015 (Oct 14 - Dec 6)</li>
-                        <li>Brisbane Asia Pacific Film Festival (Nov 19 - 29)</li>
+                        <li>
+                            <ul class="releasemonth"><p>November</p>
+                                <li><strong>5-8</strong> Vancouver Asian Film Festival</li>
+                                <li><strong>5-15</strong> Toronto Reel Asian Interational Film Festival</li>
+                            </ul>
+                        </li>
                     </ul>
             </div>
         </div>
@@ -204,12 +247,13 @@
                         <li><a href="">Careers</a></li>
                         <li><a href="">Privacy Policy</a></li>
                         <li><a href="">Terms of Service</a></li>
+                        <li><a href="">Contact</a></li>
                     </ul>
                 </div>
 
                 <div class="contactlinks">
-                    <p><a href="">Contact</a></p>
-                        <ul class="socialmedia overflow">
+                        <p>FOLLOW US</p>
+                        <ul class="socialmedia">
                             <li><a href="http://www.facebook.com" id="facebook"><img src="img/facebook.png"></a></li>
                             <li><a href="http://www.facebook.com" id="twitter"><img src="img/twitter.png"></a></li>
                             <li><a href="http://www.facebook.com" id="google"><img src="img/google.png"></a></li>
@@ -218,8 +262,8 @@
                         <ul class="socialmedia overflow">
                             <li><a href="http://www.facebook.com" id="instagram"><img src="img/instagram.png"></a></li>
                             <li><a href="http://www.facebook.com" id="vimeo"><img src="img/vimeo.png"></a></li>
-                            <li><a href="http://www.facebook.com" id="pintrest"><img src="img/pintrest.png"></a></li>
-                            <li><a href="http://www.facebook.com" id="rss"><img src="img/rss.png"></a></li>
+                            <li><a href="http://www.facebook.com" id="pinterest"><img src="img/pinterest.png"></a></li>
+                            <li><a href="http://www.facebook.com" id="rss"><img src="img/rssfeed.png"></a></li>
                         </ul>
                 </div>
 
@@ -232,6 +276,7 @@
                 </div>
 
                 </div>
+                <p class="copyright">&#169; 2015 copyright recstream</p>
             </footer>
 
         </div>

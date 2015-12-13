@@ -71,7 +71,7 @@ textarea {
 @font-face {
     font-family: 'Avenir Next Condensed';
     src: url (../fonts/AvenirNextLTPro-MediumCn.otf);
-    font-weight: medium;
+    font-weight: 500;
 }
 
 @font-face {
@@ -98,6 +98,8 @@ h1,h2 {
     font-family: 'Roboto Slab', serif;
     font-weight: bold;
     font-size: 2.333333333em;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
 }
 
 h2 {
@@ -119,6 +121,8 @@ h4 {
 a {
     text-decoration: none;
     color: #222;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
 }
 
 a:hover {
@@ -129,18 +133,29 @@ p, figcaption, li {
     line-height: 1.4em;
 }
 
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
 img {
     max-width: 100%;
     height: auto;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
 }
 
-a>img:hover {
+a:hover img {
   -webkit-filter: brightness(50%);
   filter: brightness(50%);  
 }
 
 form {
     margin: 2em 0;
+    transition: all 0.8s;
 }
 
 form :focus {
@@ -148,22 +163,30 @@ form :focus {
     border: 1px solid #EA7A57; 
     border-bottom: 5px solid #EA7A57;
     outline: none;
-    color: #1e1e1e;
 }
 
-input { 
+input, textarea { 
     width: 20em;
+    height: 2em;
     margin: 0.5em auto;
-    background-color: #f2f2ed;
+    background-color: #fff;
     border: 1px solid #A6C4BC; 
     border-bottom: 5px solid #A6C4BC;
     padding: 0.4em 0.8em; 
     display: block;
+    color: #1e1e1e;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
 }
 
 label {
     text-transform: uppercase;
 }
+
+label[for="uname"]::after { 
+    content: "*"; 
+}
+
 
 button {
     background-color: #a6c4bc;
@@ -172,8 +195,10 @@ button {
     border: 2px solid #9bbfab;
     font-family: 'Avenir Next', Helvetica, sans-serif;
     font-size: 1em;
-    font-weight: bold;
+    font-weight: 500;
     margin: 0.5em;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
 }
 
 button[type="submit"] {
@@ -189,8 +214,20 @@ button[type="submit"]:hover {
 
 
 /******* CUSTOM CLASSES ********/
+
+.mainnavigation {
+    width: 100%;
+    overflow: hidden;
+}
+
+.headerlogo {
+    width: 12em;
+    margin-top: 0.5em; 
+    margin-left: 1.5em;
+}
+
 .container {
-    margin: 8em 0.5em 4em 0.5em;
+    margin: 2em 0.5em 4em 0.5em;
 }
 
 .container header {
@@ -199,19 +236,15 @@ button[type="submit"]:hover {
 
 .togglemenu {
     background-color: #1D2326;
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 4.5833333333em;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
+    z-index: 1;
 }
 
 .primemenu {
-/*    background-color: #1D2326;
-    display: block;
-    position: relative;
-    top: 4.5833333333em;
-    left: 15.583333em;
-    width: 10em;
-    float: right;*/
     display: none;
 }
 
@@ -224,6 +257,8 @@ button[type="submit"]:hover {
     font-size: 1.3333333333em;
     display: block;
     padding: 0.5em;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
 }
 
 .primemenu a:hover {
@@ -234,6 +269,7 @@ button[type="submit"]:hover {
     width: 2.5em; 
     float: right;
     margin: 1.5em; 
+    clear: left;
 }
 
 .menuicon:hover + .primemenu {
@@ -243,61 +279,27 @@ button[type="submit"]:hover {
     top: 4.5833333333em;
     right: 0;
     width: 10em;
-    float: right;
+    z-index: 1;
 }
 
 #searchicon {
     display: none;
 }
 
-#searchtext {
-    display: display;
-}
-
-.sliderimage {
-    width: 100%;
-    height: 16.6666666667em;
-}
-
-.bg-image-slider {
-    background-image: url(../img/throne.jpg);
-    
-    -ms-background-position-x: center;
-    -ms-background-position-y: top;
-    background-position: center top;
-
-    background-size: cover;
-/*    position: relative;*/
-}
-
-.slidercaption {
-    position: relative;
-    top: 16.6666666667em;
-    margin: 0 0.5em;
-}
-
-.selector {
-    display: block;
-    width: 1em;
-    height: 1em;
-    background-color: #F3F3F3;
-}
-
-.selector:hover {
-    background-color: #3195A1;
-}
-
-.selector:hover + #slide1 {
-    background-color: #3195A1;
-}
-
-div[id="slide1"]:hover + .bg-image-slider {
-    background-image: url(../img/veteran.jpg);
-}
-
 .authorname {
+    font-size: 0.83333333333em;
     text-transform: uppercase;
     color: #9B9B9B;
+}
+
+.authorname a{
+    text-transform: uppercase;
+    color: #3195A1;
+}
+
+.authorname a:hover{
+    text-transform: uppercase;
+    color: #ea7a57;
 }
 
 .featurearticles {
@@ -313,6 +315,8 @@ div[id="slide1"]:hover + .bg-image-slider {
     background-color: #3195A1; 
     display: inline-block;
     padding: 0.4166666667em;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
 }
 
 .featureblurb {
@@ -321,10 +325,6 @@ div[id="slide1"]:hover + .bg-image-slider {
 
 .featureblurb img {
     margin-bottom: 0.5em; 
-}
-
-.featureblurb a {
-    color: #3195A1
 }
 
 .recentreviews {
@@ -349,6 +349,7 @@ div[id="slide1"]:hover + .bg-image-slider {
     max-width: 50%;
     height: auto; 
     float: left;
+    clear: right;
 }
 
 .reviewblurb figcaption, .featureblurb figcaption {
@@ -359,6 +360,7 @@ div[id="slide1"]:hover + .bg-image-slider {
     float: left;
     width: 50%;
     padding: 1em;
+    clear: right;
 }
 
 .rating {
@@ -371,26 +373,42 @@ div[id="slide1"]:hover + .bg-image-slider {
     border-style: solid;
 }
 
-.sidebar ul {
-    padding-top: 0.7em;
+.popularposts, .releases, .upcomingevents {
+    display: block;
 }
 
 .popularposts figure img {
     display: none;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
 }
 
 .popularposts a{
+    display: inline-block;
     text-transform: uppercase;
     font-family: 'Avenir Next Condensed';
-    font-weight: medium;
     color: #222;
     font-size: 1.16666666667em;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
 }
 
-.popularposts>li:hover, .popularposts a:hover{
+.popularposts a:hover{
     display: inline-block;
     background-color: #ea7a57;
     color: #fff;
+}
+
+.releases, .upcomingevents {
+    padding: 1em;
+}
+
+.releasemonth p {
+    font-family: 'Avenir Next Condensed';
+    font-size: 1.16666666667em;
+    text-transform: uppercase;
+    margin: 0.4em 0;
+    font-weight: 500;
 }
 
 .mainfooter {
@@ -398,11 +416,17 @@ div[id="slide1"]:hover + .bg-image-slider {
     text-align: center;
     color: #A6C4BC; 
     padding: 1.5em;
+    width: 100%;
+    text-transform: uppercase;
+    position: relative;
+    bottom: 0;
 }
 
 .mainfooter a {
     color: #fff;
-    font-size: 1em;
+    font-size: 0.875em;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
 }
 
 .mainfooter a:hover {
@@ -421,6 +445,7 @@ div[id="slide1"]:hover + .bg-image-slider {
     display: block;
     width: 15.3333333333em;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 .socialmedia li {
@@ -436,32 +461,40 @@ div[id="slide1"]:hover + .bg-image-slider {
     margin: 0.25em;
 }
 
-a[id="facebook"]:hover {
-    background-color: blue;
+#facebook:hover {
+    background-color: #385998;
 }
 
 #twitter:hover {
-    background-color: blue;
+    background-color: #1baae1;
 }
 
 #youtube:hover {
-    background-color: blue;
+    background-color: #f33;
 }
 
 #google:hover {
-    background-color: blue;
+    background-color: #c63d20;
 }
 
 #instagram:hover {
-    background-color: blue;
+    background-color: #4e433c;
 }
 
-#pintrest:hover {
-    background-color: blue;
+#pinterest:hover {
+    background-color: #cd2028;
 }
 
 #vimeo:hover {
-    background-color: blue;
+    background-color: #9cca68;
+}
+
+#rss:hover {
+    background-color: #f60;
+}
+
+#searchicon>img {
+    width: 1.25em;
 }
 
 .labelabove {
@@ -476,8 +509,15 @@ a[id="facebook"]:hover {
     float: right;
 }
 
-.overflow {
+.nooverflow {
     overflow: hidden;
+}
+
+.copyright {
+    text-align: center;
+    color: #fff;
+    font-size: 0.6em;
+    padding: 1.5em 0;
 }
 
 

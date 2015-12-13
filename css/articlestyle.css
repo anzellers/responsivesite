@@ -1,15 +1,8 @@
+/******* ARTICLE PAGE STYLE ********/
+
 main {
-/*	background-image: url(../img/beautyinside.jpg);
-	background-position: fixed;
-	background-repeat: no-repeat;
-	background-size: 100%;*/
 	width: 100%;
 	margin: 0;
-}
-
-.headerimage {
-	position: relative;
-	width: 100%
 }
 
 article {
@@ -24,9 +17,13 @@ article>header {
 	padding-top: 1em;
 }
 
-p {
+article p {
 	line-height: 1.4em;
 	margin: 1.5em 0;
+}
+
+article a{
+	color: #ea7a57;
 }
 
 blockquote {
@@ -43,23 +40,20 @@ blockquote {
 
 article img {
 	width: 100%;
+	height: auto;
+}
+
+article figure {
+	border-top: 2px solid #A6C4BC;
 }
 
 article figcaption {
 	font-weight: 500;
+	font-size: 0.875em;
 	font-style: italic;
-}
-
-strong {
-	font-weight: bold;
-}
-
-em {
-	font-style: italic;
-}
-
-article a {
-
+	padding: 0.5em 1em;
+	color: #fff;
+	background-color: #A6C4BC;
 }
 
 article a:hover {
@@ -67,31 +61,104 @@ article a:hover {
 	background-color: #ea7a57;
 }
 
-.authorname, date {
+article p[class="authorname"], date {
 	text-transform: uppercase;
+	font-size: 0.9em;
     color: #3195A1;
-    line-height: 0;
+    margin: 0.5em 0;
+}
+
+article p[class="authorname"] a:hover {
+	background-color: transparent;
+}
+
+a:hover figure>img {
+  -webkit-filter: brightness(50%);
+  filter: brightness(50%);  
+}
+
+iframe {
+	display: block;
+	width: 17.2857142857em;
+	margin: 0 auto;
+	-webkit-transition: all 0.8s;
+    transition: all 0.8s;
+}
+
+.headerimage {
+	position: relative;
+	width: 100%;
 }
 
 .container {
 	margin: 0;
+	width: 100%;
+	margin-bottom: 10em;
 }
 
-.secondarymenu {
+.anothermenu {
 	display: none;
 }
 
-.sharelinks {
-	margin: 1em 0; 
+.rating {
+    display: block;
+    margin-top: 0.5em;
+    overflow: hidden;
+    margin: 1em 0;
 }
 
-.sharelinks img {
+.rating>img{
+    width: 2.5em;
+    margin: 0;
+    float: left;
+}
+
+.sharelinks {
+	width: 18em;
+	margin: 1em auto;
+	overflow: hidden; 
+}
+
+.sharelinks li {
+	float: left;
+	margin: 0 1em;
+}
+
+.social {
+	display: block;
 	width: 4em;
+	height: 4em;
+	background-color: #A6C4BC;
+	padding: 1em;
+	border-radius: 2em;
+}
+
+.social img {
+	width: 3em;
+	-webkit-filter: invert(1) brightness(2);
+	filter: invert(1) brightness(2);  
+}
+
+.video {
+	width: 100%;
 }
 
 .sidebar {
 	display: none;
 }
+
+.filminfo {
+	border-top: 3px solid #d8d8d8;
+	border-bottom: 3px solid #d8d8d8;
+	margin: 2em 1.6666666667em;
+	overflow: hidden;
+}
+
+.filminfo ul {
+	overflow: hidden;
+	padding: 0 0.9em;
+}
+
 
 .filminfo li>p:first-child {
 	text-transform: uppercase;
@@ -99,19 +166,369 @@ article a:hover {
 }
 
 .filminfo li>p {
-	line-height: 0;
 	float: left;
 	width: 50%;
+	margin: 0.7em 0;
+}
+
+.relatedposts {
+	margin: 2em 1.6666666667em;
+	padding: 0 0.9em;
+	padding-bottom: 2em;
+    border-bottom: 1px solid #d8d8d8;
+    overflow: hidden;
+}
+
+.relatedposts header {
+	border-bottom: 0.1875em;
+    border-color: #EA7A57; 
+    border-style: solid;
+}
+
+.relatedposts p.authorname {
+	display: none;
+}
+
+.relatedposts header>h4 {
+    font-family: 'Avenir Next Condensed', sans-serif;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #EA7A57; 
+    display: inline-block;
+    padding: 0.4166666667em;
+}
+
+.relatedblurb {
+	width: 50%;
+	float: left;
+	clear: right;
+}
+
+.relatedposts div:nth-child(2) {
+	padding-right: 1em;
+}
+
+.relatedposts div:nth-child(3) {
+	padding-left: 1em;
+}
+
+.relatedposts div:nth-last-child(1) {
+	display: none;
+}
+
+.comments {
+	margin: 2em 1.6666666667em;
+	padding: 0 0.9em;
+
+}
+
+.comments input, textarea{
+	display: inline-block;
+	width: 100%;
+    height: 2em;
+    margin: 0.5em 0;
+    border: 1px solid #3195A1; 
+    border-bottom: 5px solid #3195A1;
+}
+
+.comments form {
+	margin: 1em 0;
+	color: #1e1e1e;
+	overflow: hidden;
+}
+
+.comments input:focus {
+    border: 1px solid #EA7A57; 
+    border-bottom: 5px solid #EA7A57;
+    outline: none;
+    color: #1e1e1e;
+}
+
+.comments label {
+	display: inline-block;
+	margin-top: 1em;
+}
+
+.comments textarea {
+	margin-top: 2em;
+	height: 8em;
+}
+
+.comments textarea:focus {
+	height: 15em;
+}
+
+.comments button {
+	padding: 0.4em 4em;
+	float: right;
+	clear: left;
+}
+
+
+@media (min-width: 29.25em) {
+
+iframe {
+	width: 37.5em;
+	height: 22.5em;
+}
+
+}
+
+
+
+@media (min-width: 48em) {
+
+article {
+    margin: 0 3em;
+}
+
+article figure {
+	width: 80%;
+	height: auto;
+	margin: 0 auto;
+}
+
+blockquote {
+	margin: 0.5em 2.5em;
+}
+
+h1 {
+	font-size: 3.428571428em;
+}
+
+article>header {
+	overflow: hidden;
+}
+
+iframe {
+	width: 45.7142857143em;
+	height: 22.5em;
+}
+
+.headerlogo {
+    width: 7em;
+    margin-top: 0.8em; 
+    margin-left: 1.5em;
+}
+
+.container {
+	margin-top: 6.6em;
+}
+
+.video {
+	display: inline-block;
+	margin: 0 auto;
+}
+
+.togglemenu, .primemenu {
+	height: 3.5em;
+}
+
+.primemenu a{
+    padding: 0.98em 0.5em;
+}
+
+#searchicon {
+	display: block;
+	padding: 0.93em;
+}
+
+.anothermenu {
+	display: block;
+	width: 100%;
+	height: 3.3em;
+	position: absolute;
+	top: 3.3em;
+	background-color: #A6C4BC;
+	overflow: hidden;
+}
+
+#tabindicator {
+	background-image: url(../img/indicator.png);
+	background-size: 20px;
+	-ms-background-position-x: center;
+    -ms-background-position-y: bottom;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+
+.secondarymenu {
+	position: absolute;
+	right: 7.2em;
+}
+
+.secondarymenu li{
+	float: left;
+	clear: right;
+	padding: 1em;
+}
+
+.secondarymenu a{
+	font-family: 'Avenir Next Condensed', sans-serif;
+    font-weight: 200;
+    font-size: 1em;
+    text-transform: uppercase;
+    color: #fff;
+    padding-bottom: 0.5em;
+	border-bottom: 1px solid #A6C4BC;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
+}
+
+.secondarymenu a:hover {
+	padding-bottom: 0.1em;
+	border-bottom: 3px solid #fff;
+}
+
+.articleinfo {
+	float: left;
+	clear: right;
+	width: inherit;
+}
+
+.sharelinks {
+	float: right;
+	clear: right;
+	margin: 0;
+	width: 14.4em;
+	margin-top: 3em; 
+}
+
+.social {
+	display: block;
+	width: 2.8em;
+	height: 2.8em;
+	background-color: #A6C4BC;
+	padding: 0.7em;
+	border-radius: 1.4em;
+}
+
+.social img {
+	width: 1.4em;
+}
+
+article p:first-child {
+	margin-top: 3em;
 }
 
 .filminfo ul {
-	overflow: hidden;
-	margin: 0 0.9em;
-    padding: 0 1.6666666667em;
+	float: left;
+	clear: right;
+	width: 50%;
+	padding: 1em 3em;
 }
 
-@media (min-width: 768px) {
+.relatedblurb {
+	width: 33%;
+}
 
+.relatedposts div:nth-last-child(1) {
+	display: block;
+	padding-left: 1em;
+}
 
+.relatedposts p.authorname {
+	display: inline;
+}
+
+.comments {
+	overflow: hidden;
+}
+
+.comments form{
+	width: 100%;
+}
+
+.comments form>div {
+	display: block;
+	width: 50%;
+	float: left;
+	clear: right;
+}
+
+.comments div:first-child {
+	padding-right: 1em;
+}
+
+}
+
+@media (min-width: 1024px) {
+
+.container {
+	overflow: hidden;
+}
+
+main {
+	width: 73%;
+	margin-right: 1em;
+	float: left;
+	clear: right;
+}
+
+article {
+	margin: 0 2.5em;
+}
+
+iframe {
+	width: 37.5em;
+}
+
+.sidebar {
+	display: block;
+	position: relative;
+	right: 0;
+}
+
+.filminfo {
+	float: left;
+	clear: right;
+	margin: 2em 0 0 0;
+	width: 25%;
+}
+
+.filminfo ul {
+	float: none;
+	width: 100%;
+	padding: 0;
+}
+
+.relatedposts {
+	width: 70%;
+	margin: 0 2.5em;
+	padding: 1em 0;
+	display: block;
+	border-top: 1px solid #d8d8d8;
+}
+
+.comments {
+	width: 70%;
+}
+
+}
+
+@media (min-width: 90em) {
+
+.anothermenu {
+	padding: 0 10%;
+}
+
+.secondarymenu {
+    right: 19em;
+}
+
+.container {
+	width: 83.333333333%;
+	margin: 6.6em auto;
+}
+
+iframe {
+	width: 37.5em;
+	max-width: 49em;
+}
+
+.sidebar {
+		position: relative;
+		left: 0;
+}
 
 }
